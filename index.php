@@ -34,7 +34,9 @@
 				</div>
 			<?php endforeach ?>
 		</div>
+		<!-- Footer -->
 		<?php require_once(ROOT_PATH . '/includes/footer.php'); ?>
+		<!-- // Footer -->
 	</div>
 	<!-- // Page content -->		
 </body>
