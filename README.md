@@ -50,6 +50,6 @@ From the command line, use the built-in PHP server within the project's root dir
 
 * Each project prerequisite website also has many excellent tutorials that i found useful
 
-* https://www.w3schools.com/ is invalueable
+* https://www.w3schools.com/ is invaluable
 
 * The online Zend 5.3 Exam was a good practice resource http://www.zendexam.com/
