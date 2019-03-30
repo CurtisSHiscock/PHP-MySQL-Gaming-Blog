@@ -24,13 +24,13 @@ Edit the PHP.ini file to enable mysqli
 
 [Install Composer](https://getcomposer.org/)
 
-Install Bootstrap
+Install Bootstrap:
 
 ```
     composer require twbs/bootstrap
 ```
 
-Install Slim
+Install Slim:
 ```
     composer require slim/slim
 ```
