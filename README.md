@@ -6,9 +6,9 @@ Built with PHP, bootstrap, and the slim microframework.
 ## Prerequisites
 
 * [PHP](https://www.php.net/)
-* [Composer] (https://getcomposer.org/)
-* [Bootstrap] (https://getbootstrap.com/)
-* [Slim] (http://www.slimframework.com/)
+* [Composer](https://getcomposer.org/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Slim](http://www.slimframework.com/)
 
 ## Installing
 
