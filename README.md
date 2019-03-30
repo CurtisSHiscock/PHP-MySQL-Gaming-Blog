@@ -18,10 +18,11 @@ Clone the repository to your desired directory
 https://github.com/CurtisSHiscock/Valeros.git
 ```
 
-*[Install PHP](https://www.php.net/)
-    Edit the PHP.ini file to enable mysqli
+[Install PHP](https://www.php.net/)
 
-*[Install Composer](https://getcomposer.org/)
+Edit the PHP.ini file to enable mysqli
+
+[Install Composer](https://getcomposer.org/)
 
 Install Bootstrap
 
@@ -38,7 +39,7 @@ Install Slim
 ```
 
 ## Deployment
-From the command line, use the build in PHP server within the project's root directory
+From the command line, use the built-in PHP server within the project's root directory
 ```
     php -S localhost:3000
 ```
