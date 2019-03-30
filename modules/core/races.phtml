@@ -1,0 +1,25 @@
+<!-- Include header information -->
+<?php require_once( ROOT_PATH . '/includes/header.php') ?>
+<!-- Include navbar -->
+<?php require_once(ROOT_PATH . '/includes/navbar.php'); ?>
+<!-- Use public functions -->
+<?php $posts = getPublishedPosts($conn); ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pathfinder | Races</title>
+</head>
+
+<body>
+	<!-- container - wraps whole page -->
+	<div class="container">
+		<hr>
+		<div class="content">
+		</div>
+		<!-- Footer -->
+		<?php require_once( ROOT_PATH . '/includes/footer.php') ?>
+		<!-- // Footer -->
+	</div>
+	<!-- // Page content -->		
+</body>
+</html>

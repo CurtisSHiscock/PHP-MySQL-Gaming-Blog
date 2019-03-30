@@ -1,0 +1,37 @@
+<!-- Include header information -->
+<?php require_once( ROOT_PATH . '/includes/header.php') ?>
+<!-- Include navbar -->
+<?php require_once(ROOT_PATH . '/includes/navbar.php'); ?>
+<!-- Use public functions -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pathfinder | Classes</title>
+</head>
+
+<body>
+	<!-- container - wraps whole page -->
+	<div class="container">
+		<hr>
+		<!-- Example for class boxes -->
+		<div class="classwrapper" style="text-align:center;">
+		<?php
+				$classes = getClasses($conn);
+				foreach ($classes as $class) {
+					echo	'<div class="classbox" style="max-height:20%; max-width:20%;border:1px solid #dddd;display:inline-block;margin:2;">';
+					echo	'<a href="/classes/'.$class['name'].'"><img style="display:block;margin:auto;height:200px;width:121px;" src="'. BASE_URL .'/static/images/pfs/png/'. $class['name'] .' - '. $class['iconic'].'.png">';
+					echo	'<div style="text-align:center;" class="classbox-classtext">'.$class['name'].'</div></a>';
+					echo 	'</div>';
+				}
+			?>
+		</div>
+		<div>
+		<!-- Example for class boxes -->
+
+		<!-- Footer -->
+		<?php require_once( ROOT_PATH . '/includes/footer.php') ?>
+		<!-- // Footer -->
+	</div>
+	<!-- // Page content -->		
+</body>
+</html>

@@ -14,10 +14,10 @@
     if(isset($_POST['register_btn'])){
         // Area under construction - needs lot of verification/validation logic 
         //Variables
-        $username = esc($_POST['username']);
-        $email = esc($_POST['email']);
-        $password_1 = esc($_POST['password_1']);
-        $password_1 = esc($_POST['password_1']);
+        $username = esc($_POST['username'], $conn);
+        $email = esc($_POST['email'], $conn);
+        $password_1 = esc($_POST['password_1'], $conn);
+        $password_1 = esc($_POST['password_1'], $conn);
 
         //Verify filled fields
         if(empty($username)) {array_push($errors, "Please enter username");}        
@@ -52,8 +52,8 @@
 
     // LOG USER IN
 	if (isset($_POST['login_btn'])) {
-		$username = esc($_POST['username']);
-		$password = esc($_POST['password']);
+		$username = esc($_POST['username'], $conn);
+		$password = esc($_POST['password'], $conn);
 
 		if (empty($username)) { array_push($errors, "Username required"); }
 		if (empty($password)) { array_push($errors, "Password required"); }
@@ -67,7 +67,7 @@
 				$reg_user_id = mysqli_fetch_assoc($result)['id']; 
 
 				// put logged in user into session array
-				$_SESSION['user'] = getUserById($reg_user_id); 
+				$_SESSION['user'] = getUserById($reg_user_id, $conn); 
 				// if user is admin, redirect to admin area
 				if ( in_array($_SESSION['user']['role'], ["Admin", "Author"])) {
 					$_SESSION['message'] = "You are now logged in";
@@ -77,7 +77,7 @@
 				} else {
 					$_SESSION['message'] = "You are now logged in";
 					// redirect to public area
-					header('location: index.php');				
+					header('location: ./');				
 					exit(0);
 				}
 			} else {
@@ -87,9 +87,8 @@
 	}
 
 	// Get user info from user id
-	function getUserById($id)
+	function getUserById($id, $conn)
 	{
-		global $conn;
 		$sql = "SELECT * FROM users WHERE id=$id LIMIT 1";
 
 		$result = mysqli_query($conn, $sql);
@@ -100,11 +99,10 @@
 		return $user; 
     }
     //escape value for form
-    function esc(String $value)
+    function esc(String $value, $conn)
 	{	
-		// bring the global db connect object into function
-		global $conn;
-
+        // bring the global db connect object into function
+        
 		$val = trim($value); // remove empty space sorrounding string
 		$val = mysqli_real_escape_string($conn, $value);
 
@@ -113,8 +111,9 @@
 
     //logout
     if(isset($_POST['logout_btn'])){
-        session_start();
+        // session_start();
         session_destroy();
-        header('location: index.php');
+        session_start();
+        header('location:./');
     }
 ?>
