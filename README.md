@@ -15,7 +15,7 @@ Built with PHP, bootstrap, and the slim microframework.
 Clone the repository to your desired directory 
 
 ```
-
+https://github.com/CurtisSHiscock/Valeros.git
 ```
 
 *[Install PHP](https://www.php.net/)
