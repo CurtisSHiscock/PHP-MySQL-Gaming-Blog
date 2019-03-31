@@ -3,6 +3,10 @@
 A Web App to be used as a resource for the Pathfinder RPG Game. I made this to teach myself PHP.
 Built with PHP, bootstrap, and the slim microframework.
 
+## Screenshots
+
+![Screenshot-1](/static/images/screenshots/screen/screenshot-1.png?raw=true "")
+
 ## Prerequisites
 
 * [PHP](https://www.php.net/)
