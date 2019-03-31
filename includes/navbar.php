@@ -4,13 +4,16 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--pathfinder-red);">
   <a class="navbar-brand" href="/" alt="Pathfinder">
-    <?php 
-        echo '<img src="' . BASE_URL . '\static\images\logo.png" alt="">';
-      ?>
+    <?php echo '<img src="' . BASE_URL . '\static\images\logo.png" alt="">';?>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <!-- Follower Bar -->
+  <div>
+      <img id="follower" style="box-sizing:border-box;display:inline-block;position:fixed;top:50px;left:255px" src="<?php echo BASE_URL ."/static/images/follower.png"?>">
+  </div>
+  <!-- // Follower Bar -->
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
     	<!-- Display navbar items from db -->
