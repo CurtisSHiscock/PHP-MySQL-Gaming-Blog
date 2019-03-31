@@ -17,7 +17,7 @@
         $username = esc($_POST['username'], $conn);
         $email = esc($_POST['email'], $conn);
         $password_1 = esc($_POST['password_1'], $conn);
-        $password_1 = esc($_POST['password_1'], $conn);
+        $password_2 = esc($_POST['password_2'], $conn);
 
         //Verify filled fields
         if(empty($username)) {array_push($errors, "Please enter username");}        
@@ -44,9 +44,29 @@
             echo "<script>console.log('Errors found')</script>";
             echo "<script>console.log(". json_encode($errors) .")</script>";
         } else {
-            $password = md5($password_1);//hash password
-            $query = "INSERT INTO users (username, email, password, created_at, updated_at) VALUES ('$username', '$email', '$password', now() , now())";
-            mysqli_query($conn, $query);
+            $password = md5($password_1);//encrypt the password before saving in the database
+			$query = "INSERT INTO users (username, email, password, created_at, updated_at) 
+					  VALUES('$username', '$email', '$password', now(), now())";
+			mysqli_query($conn, $query);
+
+			// get id of created user
+			$reg_user_id = mysqli_insert_id($conn); 
+
+			// put logged in user into session array
+			$_SESSION['user'] = getUserById($reg_user_id, $conn);
+
+			// if user is admin, redirect to admin area
+			if ( in_array($_SESSION['user']['role'], ["Admin", "Author"])) {
+				$_SESSION['message'] = "You are now logged in";
+				// redirect to admin area
+				header('location: ' . BASE_URL . '/');
+				exit(0);
+			} else {
+				$_SESSION['message'] = "You are now logged in";
+				// redirect to public area
+				header('location: /');				
+				exit(0);
+			}
         }
     }
 
