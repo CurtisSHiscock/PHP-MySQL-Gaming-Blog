@@ -5,7 +5,9 @@ Built with PHP, bootstrap, and the slim microframework.
 
 ## Screenshots
 
-![Screenshot-1](/static/images/screenshots/screenshot-1.png?raw=true "")
+![Screenshot-1](/static/images/screenshots/screenshot-1.png?raw=true "Home Page")
+![Screenshot-2](/static/images/screenshots/screenshot-2.png?raw=true "Class Directory")
+
 
 ## Prerequisites
 
