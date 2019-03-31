@@ -11,15 +11,13 @@ function follow(element) {
     $("#follower").stop(true,false).show("slow").animate({left:elementPos.left, width:elementWidth, height:elementHeight}, 300);          
 };
 
-// $("body, html:not('.nav-item')").mouseover(function() {
-//     $( "#follower" ).hide( "slow", function() {
-//     //   alert( "Animation complete." );
-//     });
-//   });
-
-  $("*").on("mouseleave", ":not(.foo)", function(){
-    $("#follower").animate({left:'240px', width:'60px', height:'40px'}, 300),
-    $( "#follower" ).hide( "slow", function() {
-        //   alert( "Animation complete." );
-        });
+$(function(){
+    $(".nav-item").mouseleave(function() {
+        leave(this);
+    })
 });
+
+function leave(element) {
+    $("#follower").animate({left:'240px', width:'0px', height:'40px'}, 800),
+    $( "#follower" ).hide( "slow");
+};
