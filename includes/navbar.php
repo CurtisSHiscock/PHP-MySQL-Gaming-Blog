@@ -11,7 +11,7 @@
   </button>
   <!-- Follower Bar -->
   <div>
-      <img id="follower" style="box-sizing:border-box;display:inline-block;position:fixed;top:50px;left:255px" src="<?php echo BASE_URL ."/static/images/follower.png"?>">
+      <img id="follower" style="user-select:none;box-sizing:border-box;display:inline-block;position:absolute;top:40px;left:255px" src="<?php echo BASE_URL ."/static/images/follower.png"?>">
   </div>
   <!-- // Follower Bar -->
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">

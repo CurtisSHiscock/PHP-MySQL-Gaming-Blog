@@ -1,5 +1,5 @@
 $(function(){
-    $(".nav-item").hover(function() {
+    $(".nav-item").mouseenter(function() {
         follow(this);
     })
 });
@@ -17,8 +17,8 @@ function follow(element) {
 //     });
 //   });
 
-  $(document).on("mouseleave", ":not('.nav-item')", function(){
-    $("#follower").stop(true,false).show("slow").animate({left:'240px', width:'60px', height:'40px'}, 300);
+  $("*").on("mouseleave", ":not(.foo)", function(){
+    $("#follower").animate({left:'240px', width:'60px', height:'40px'}, 300),
     $( "#follower" ).hide( "slow", function() {
         //   alert( "Animation complete." );
         });

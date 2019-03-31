@@ -11,10 +11,10 @@
 
 <body>
 	<!-- container - wraps whole page -->
-	<div class="container">
+	<div class="container" style="margin-bottom:1px;">
 		<hr>
 		<!-- Example for class boxes -->
-		<div class="classwrapper" style="text-align:center;">
+		<div class="container" style="text-align:center;">
 		<?php
 				$classes = getClasses($conn);
 				foreach ($classes as $class) {
@@ -27,11 +27,10 @@
 		</div>
 		<div>
 		<!-- Example for class boxes -->
-
-		<!-- Footer -->
-		<?php require_once( ROOT_PATH . '/includes/footer.php') ?>
-		<!-- // Footer -->
 	</div>
 	<!-- // Page content -->		
+			<!-- Footer -->
+			<?php require_once( ROOT_PATH . '/includes/footer.php') ?>
+		<!-- // Footer -->
 </body>
 </html>

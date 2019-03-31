@@ -25,6 +25,16 @@ function getPublishedPosts($conn) {
 	return $posts;
 }
 
+function getSinglePost($conn, $slug){
+	$sql = "SELECT * FROM posts WHERE slug='$slug' LIMIT 1";
+	$result = mysqli_query($conn, $sql);
+
+	// fetch all posts as an associative array called $posts
+	$post = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+	return $post;	
+}
+
 function getClasses($conn){
 	//NOTE: ONLY RETURNS CORE
 	$sql = "SELECT * FROM classes where source != 'none'";

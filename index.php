@@ -34,8 +34,14 @@ $app->get('/classes', function (Request $request, Response $response){
 // });
 $app->get('/classes/{class}', function (Request $request, Response $response, array $args){
     $conn = $this->db;
+
+    /*Take in and sanitize user input */
     $class = $args['class']; //Note: Must escape this before hosting
-    $query = "SELECT name FROM classes where name='$class'";
+	$val = trim($class); // remove empty space sorrounding string
+	$val = mysqli_real_escape_string($conn, $class);
+
+    $query = "SELECT name FROM classes where name='$val'";
+
     $result = mysqli_query($conn, $query);
     $classes = mysqli_fetch_all($result, MYSQLI_ASSOC);
     $count = count($classes);
@@ -52,6 +58,26 @@ $app->get('/races', function (Request $request, Response $response){
 $app->get('/magic_items', function (Request $request, Response $response){
     $conn = $this->db;
     return $this->view->render($response, "/magic_items.phtml", ['conn' => $conn]);
+});
+$app->get('/{slug}', function (Request $request, Response $response, array $args){
+    $conn = $this->db;
+
+    /*Take in and sanitize user input */
+    $slug = $args['slug']; //Note: Must escape this before hosting
+	$val = trim($slug); // remove empty space sorrounding string
+	$val = mysqli_real_escape_string($conn, $slug);
+
+    $query = "SELECT slug FROM posts where slug='$val'";
+
+    $result = mysqli_query($conn, $query);
+    $slugs = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $count = count($slugs);
+
+    if($count > 0){
+        return $this->view->render($response, "/single_post.phtml", ['conn' => $conn, 'slug'=> $slug]);
+    } else{
+        return $this->view->render($response, "/missing.phtml", ['conn' => $conn]);
+    }
 });
 
 $app->run();
