@@ -1,5 +1,5 @@
 $(function(){
-    $(".nav-item").mouseenter(function() {
+    $(".nav-item").not(".navbar-brand").mouseenter(function() {
         follow(this);
     })
 });

@@ -59,6 +59,13 @@ $app->get('/magic_items', function (Request $request, Response $response){
     $conn = $this->db;
     return $this->view->render($response, "/magic_items.phtml", ['conn' => $conn]);
 });
+$app->get('/create_post', function (Request $request, Response $response){
+    $conn = $this->db;
+    if(isset($_SESSION['user']) && $_SESSION['user']['role'] == "Admin")
+        return $this->view->render($response, "/create_post.phtml", ['conn' => $conn]);
+    else
+        return $this->view->render($response, "/missing.phtml", ['conn' => $conn]);
+});
 $app->get('/{slug}', function (Request $request, Response $response, array $args){
     $conn = $this->db;
 

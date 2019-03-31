@@ -18,7 +18,7 @@
 		<?php
 				$classes = getClasses($conn);
 				foreach ($classes as $class) {
-					echo	'<div class="classbox" style="max-height:20%; max-width:20%;border:1px solid #dddd;display:inline-block;margin:2;">';
+					echo	'<div class="classbox" style="box-style:border-box;box-shadow: 2px 3px #dddddd;max-height:20%; max-width:20%;border:1px solid #dddd;display:inline-block;margin:5;">';
 					echo	'<a href="/classes/'.$class['name'].'"><img style="display:block;margin:auto;height:200px;width:121px;" src="'. BASE_URL .'/static/images/pfs/png/'. $class['name'] .' - '. $class['iconic'].'.png">';
 					echo	'<div style="text-align:center;" class="classbox-classtext">'.$class['name'].'</div></a>';
 					echo 	'</div>';

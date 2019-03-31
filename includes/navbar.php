@@ -11,7 +11,7 @@
   </button>
   <!-- Follower Bar -->
   <div>
-      <img id="follower" style="user-select:none;box-sizing:border-box;display:inline-block;position:absolute;top:40px;left:255px" src="<?php echo BASE_URL ."/static/images/follower.png"?>">
+      <img id="follower" style="user-select:none;box-sizing:border-box;display:inline-block;display:none;position:absolute;top:45px;left:200px" src="<?php echo BASE_URL ."/static/images/follower.png"?>">
   </div>
   <!-- // Follower Bar -->
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -24,6 +24,13 @@
           echo (($navbar_item['navbar_items_href'] == $_SERVER['REQUEST_URI']) ? 'active' : '');
           echo '" href="'. BASE_URL .'' .$navbar_item['navbar_items_href']. '">' . $navbar_item['navbar_items_name'] . '</a>';
 		    }
+      ?>
+      <?php
+      if (isset($_SESSION['user']) && ($_SESSION['user']['role'] == "Admin")){
+        echo '<a class="nav-item  nav-link ';
+        echo BASE_URL . "/create_post" == $_SERVER['REQUEST_URI'] ? 'active' : '';
+        echo '" href="'. BASE_URL .'' ."/create_post". '">' . "Create Post" . '</a>';
+      }
       ?>
     </div>
   </div>
