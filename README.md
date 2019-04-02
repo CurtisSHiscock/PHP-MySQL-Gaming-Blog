@@ -1,7 +1,9 @@
 # Valeros - A Pathfinder PRD Project
 
-A Web App to be used as a resource for the Pathfinder RPG Game. I made this to teach myself PHP.
+A Web App to be used as a resource for the Pathfinder RPG Game. I made this to teach myself PHP and related technologies.
 Built with PHP, bootstrap, MySQL, and the slim microframework.
+
+This project is built under the Paizo Inc. Community Use Policy.
 
 ## Screenshots
 
@@ -60,3 +62,7 @@ From the command line, use the built-in PHP server within the project's root dir
 * https://www.w3schools.com/ is invaluable
 
 * The online Zend 5.3 Exam was a good practice resource http://www.zendexam.com/
+
+## Notice
+
+This website uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This website is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.
