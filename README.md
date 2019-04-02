@@ -1,7 +1,7 @@
 # Valeros - A Pathfinder PRD Project
 
 A Web App to be used as a resource for the Pathfinder RPG Game. I made this to teach myself PHP.
-Built with PHP, bootstrap, mySQL, and the slim microframework.
+Built with PHP, bootstrap, MySQL, and the slim microframework.
 
 ## Screenshots
 
@@ -12,6 +12,7 @@ Built with PHP, bootstrap, mySQL, and the slim microframework.
 ## Prerequisites
 
 * [PHP](https://www.php.net/)
+* [MySQL](https://dev.mysql.com/downloads/)
 * [Composer](https://getcomposer.org/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Slim](http://www.slimframework.com/)
@@ -26,9 +27,9 @@ https://github.com/CurtisSHiscock/Valeros.git
 
 [Install PHP](https://www.php.net/)
 
-Edit the PHP.ini file to enable mysqli
-
 [Install Composer](https://getcomposer.org/)
+
+[Install MySQL](https://dev.mysql.com/downloads/)
 
 Install Bootstrap:
 
