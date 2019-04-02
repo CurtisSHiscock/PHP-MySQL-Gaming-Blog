@@ -5,6 +5,25 @@ Built with PHP, bootstrap, MySQL, and the slim microframework.
 
 This project is built under the Paizo Inc. Community Use Policy.
 
+## Progress
+<pre>
+<del>Home Page</del>
+<del>User Registration and Login</del>
+<del>Class Selection Page</del>
+<del>Page Routing based on Slim Microframework</del>
+<del>Class Page</del>
+<del>Follower Bar for Navigation</del>
+<del>Admin Role</del>
+Author Role
+CRUD Module for Blog Posts
+Race
+Magic Items
+Feats
+Skills
+</pre>
+
+As i've been building this as i learn, the project could use a refactor, but i'm choosing to focus on new features for he moment.
+
 ## Screenshots
 
 ![Screenshot-1](/static/images/screenshots/screenshot-1.png?raw=true "Home Page")
