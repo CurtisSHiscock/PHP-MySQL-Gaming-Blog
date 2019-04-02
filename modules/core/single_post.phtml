@@ -1,0 +1,37 @@
+<!-- Include header information -->
+<?php require_once( ROOT_PATH . '/includes/header.php') ?>
+<!-- Include navbar -->
+<?php require_once(ROOT_PATH . '/includes/navbar.php'); ?>
+<!-- Use public functions -->
+<?php $post = getSinglePost($conn,$slug); ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pathfinder | <?php echo $slug ?></title>
+</head>
+<style>
+/* .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  background-color:red;
+} */
+</style>
+<body>
+	<!-- container - wraps whole page -->
+	<div class="container">
+		<hr>
+		<div class="container">
+            <img style="margin:auto;display:block;" src="<?php echo BASE_URL . '/static/images/' . $post['image'] ?>" class="img-thumbnail" alt="img"> 
+            <h1 style="text-align:center"><?php echo $post['title'] ?></h1>
+            <p><small><?php echo date("F j, Y ", strtotime($post['created_at'])) ?></small></p>
+            <hr>
+            <blockquote><p><?php echo $post['body'] ?><p></blockquote>
+		</div>
+		<!-- Footer -->
+		<?php require_once( ROOT_PATH . '/includes/footer.php') ?>
+		<!-- // Footer -->
+	</div>
+	<!-- // Page content -->		
+</body>
+</html>

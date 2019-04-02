@@ -77,7 +77,7 @@
   float: left;
   border-radius: 2px;
   border: 1px solid #b3b3b3;
-  position: static;
+  position: relative;
 }
 .content .post .category {
   margin-top: 0px;
@@ -140,7 +140,7 @@
 }
 
 .footer-notice{
-  margin-bottom: 50;
+  margin: 50;
 }
 
 .footer-footer{
@@ -208,3 +208,5 @@ body {
 .modal-title{
   color: var(--pathfinder-white);
 }
+
+/* Class Boxes */

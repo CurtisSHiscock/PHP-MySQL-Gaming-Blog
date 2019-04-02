@@ -1,6 +1,8 @@
-
-<div>
-<p class="footer footer-notice"><small>This website uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This website is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.<small></p>
+<footer>
+<h6> <h6>
+<?php //added this here so github recognizes it has PHP instead of HACK ?>
+<div class="footer">
+<p class="footer-notice"><small>This website uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This website is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.<small></p>
 
 <div class="footer footer-footer" style="align:center;">
 
@@ -21,3 +23,4 @@
 	
 </div> 
 </div>
+</footer>

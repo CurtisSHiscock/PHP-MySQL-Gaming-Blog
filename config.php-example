@@ -1,23 +1,18 @@
 <!-- This is where your configuration opstions are stored -->
 
-<!-- In order to run this application, you must replace the fields
- in the mysqli_connect call with your server, username, password, and database like so:
-
- 	$conn = mysqli_connect("myServer", "myUser", "myPass", "myDB");
-
- Once that's done, just change the file extension from .php-example to .php, and you're ready to go.
-
--->
+<!-- In order to run this application, you must replace the fields below-->
 
 <?php 
-	session_start();
-	// connect to database
-	$conn = mysqli_connect("[server]", "[username]", "[password]", "[database]");
 
-	if (!$conn) {
-		die("Error connecting to database: " . mysqli_connect_error());
-	}
-    // define global constants
-	define ('ROOT_PATH', realpath(dirname(__FILE__)));
-	define('BASE_URL', 'http://localhost:3000');
+$config['displayErrorDetails'] = true;
+$config['addContentLengthHeader'] = false;
+
+$config['db']['host']   = 'host'; //replace with host
+$config['db']['user']   = 'user'; //replace with username
+$config['db']['pass']   = 'password'; //replace with password
+$config['db']['dbname'] = 'dbname'; //replace with database name
+
+session_start();
+define ('ROOT_PATH', realpath(dirname(__FILE__)));
+define('BASE_URL', 'http://localhost:3000'); //Default localhost for development. Replace depending on your environment
 ?>
