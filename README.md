@@ -1,7 +1,7 @@
 # Valeros - A Pathfinder PRD Project
 
 A Web App to be used as a resource for the Pathfinder RPG Game. I made this to teach myself PHP.
-Built with PHP, bootstrap, and the slim microframework.
+Built with PHP, bootstrap, mySQL, and the slim microframework.
 
 ## Screenshots
 
