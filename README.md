@@ -43,7 +43,7 @@ As i've been building this as i learn, the project could use a refactor, but i'm
 Clone the repository to your desired directory 
 
 ```
-https://github.com/CurtisSHiscock/Valeros.git
+    git clone https://github.com/CurtisSHiscock/Valeros.git
 ```
 
 [Install PHP](https://www.php.net/)
